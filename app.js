@@ -4,11 +4,12 @@ require("express-async-errors");
 const express = require("express");
 const app = express();
 
+const mainRouter = require("./routes/main");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
 // middleware
-const mainRouter = require("./routes/main");
+
 app.use(express.static("./public"));
 app.use(express.json());
 
